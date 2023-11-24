@@ -21,12 +21,18 @@ import Sphere_5 from "../models/Sphere_5"
 import Sphere_6 from "../models/Sphere_6"
 import Star from "../models/Star"
 import Text_1 from "../text/Text_1"
+import { Float } from '@react-three/drei'
 
 const Experience = () => {
     return (
-        <>
+        <Float
+        speed={5}
+        rotationIntensity={.1}
+        floatIntensity={1}
+        floatingRange={[.1, .1]}
+    >
             <Background />
-            <group scale={.75}>
+            <group scale={1}>
                 <Cone_1 />
                 <Cone_2 />
                 <Cone_3 />
@@ -50,7 +56,7 @@ const Experience = () => {
                 <Star />
             </group>
             {/* <Text_1 /> */}
-        </>
+        </Float>
     )
 }
 

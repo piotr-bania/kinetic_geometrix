@@ -6,7 +6,7 @@ const Background = () => {
 
     return (
         <mesh castShadow receiveShadow position={[0, 0, 20]}>
-        <primitive object={Background.scene} />
+            <primitive object={Background.scene} />
         </mesh>
     )
 }

@@ -19,7 +19,7 @@ const Hero_Canvas = () => {
                 <Canvas shadows >
                     <PerspectiveCamera
                         makeDefault
-                        position={[Math.PI * 0, -1, 20]}
+                        position={[Math.PI * 0, 0, 25]}
                         fov={40}
                     />
 
@@ -38,7 +38,7 @@ const Hero_Canvas = () => {
                         position={[2, 2, -2]}
                     />
 
-                    <OrbitControls
+                    {/* <OrbitControls
                         // autoRotate
                         autoRotateSpeed={-.25}
                         // reverseHorizontalOrbit
@@ -53,7 +53,8 @@ const Hero_Canvas = () => {
                         maxDistance={20}
                         enableDamping={true}
                         dampingFactor={0.05}
-                    />
+                    /> */}
+
                     <EffectComposer>
                         <Bloom
                             intensity={1}
