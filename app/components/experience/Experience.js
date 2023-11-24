@@ -49,7 +49,7 @@ const Experience = () => {
                 <Sphere_6 />
                 <Star />
             </group>
-            <Text_1 />
+            {/* <Text_1 /> */}
         </>
     )
 }

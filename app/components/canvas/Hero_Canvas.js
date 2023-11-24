@@ -5,6 +5,7 @@ import { AnimatePresence, motion as m } from 'framer-motion'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera, Environment, OrbitControls } from '@react-three/drei'
 import Experience from '../experience/Experience'
+import { DepthOfField, EffectComposer, Autofocus, Bloom } from '@react-three/postprocessing'
 
 const Hero_Canvas = () => {
     return (
@@ -48,13 +49,21 @@ const Hero_Canvas = () => {
                         maxPolarAngle={Math.PI / 2}
                         minAzimuthAngle={-Math.PI / 2.5}
                         maxAzimuthAngle={Math.PI / 2}
-                        minDistance={10}
-                        maxDistance={25}
+                        minDistance={15}
+                        maxDistance={20}
                         enableDamping={true}
                         dampingFactor={0.05}
                     />
-
-                    <Experience />
+                    <EffectComposer>
+                        <Bloom
+                            intensity={1}
+                            blurPass={undefined}
+                            luminanceThreshold={0.9}
+                            luminanceSmoothing={0.025}
+                            mipmapBlur={false}
+                        />
+                        <Experience />
+                    </EffectComposer>
                 </Canvas>
             </m.div>
         </AnimatePresence>

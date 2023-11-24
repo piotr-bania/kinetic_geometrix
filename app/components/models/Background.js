@@ -5,7 +5,7 @@ const Background = () => {
     const Background = useGLTF('./models/Background.glb')
 
     return (
-        <mesh castShadow receiveShadow >
+        <mesh castShadow receiveShadow position={[0, 0, 20]}>
         <primitive object={Background.scene} />
         </mesh>
     )
